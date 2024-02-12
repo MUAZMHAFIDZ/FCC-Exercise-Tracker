@@ -70,7 +70,8 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
         _id: user._id,
         username: user.username,
         duration: exercise.duration,
-        date: new Date(exercise.date).toDateString()
+        date: new Date(exercise.date).toDateString(),
+        description: exercise.description
       })
     }
   } catch (err) {
